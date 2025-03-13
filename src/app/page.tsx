@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 const sections = [
   {
@@ -13,6 +14,7 @@ const sections = [
     title: "사랑의병원",
     subtitle: "최상의 의료서비스를 제공합니다",
     videoSrc: "/videos/section1.mp4",
+    link: "/ko/hospital/about-us/greeting",
   },
   {
     id: 2,
@@ -97,6 +99,11 @@ export default function Home() {
                 <div className={styles.content}>
                   <h2 className={styles.title}>{section.title}</h2>
                   <p className={styles.subtitle}>{section.subtitle}</p>
+                  {section.link && (
+                    <Link href={section.link}>
+                      <button className={styles.button}>자세히 보기</button>
+                    </Link>
+                  )}
                 </div>
               </SwiperSlide>
             ))}
