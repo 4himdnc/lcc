@@ -1,0 +1,169 @@
+.historyContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.historyHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mainTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.subTitle {
+  font-size: 20px;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: var(--color-primary-light);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineYear {
+  position: relative;
+  width: 120px;
+  height: 50px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 4px 10px var(--color-shadow);
+}
+
+.timelineContent {
+  position: absolute;
+  width: calc(50% - 80px);
+  padding: 10px 24px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.timelineItem:nth-child(odd) .timelineContent {
+  right: 50%;
+  margin-right: 80px;
+  text-align: right;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+  left: 50%;
+  margin-left: 80px;
+  text-align: left;
+}
+
+.timelineContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timelineContent li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: var(--color-gray-700);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.timelineItem:nth-child(odd) .timelineContent li {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.timelineContent li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.timelineItem:nth-child(odd) .timelineContent li::before {
+  left: auto;
+  right: 0;
+}
+
+.timelineContent li:last-child {
+  margin-bottom: 0;
+}
+
+.yearRange {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timelineItem {
+    justify-content: flex-start;
+  }
+
+  .timelineYear {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    margin-left: 30px;
+    transform: translateX(-50%);
+  }
+
+  .timelineContent {
+    width: calc(100% - 100px);
+    left: 80px !important;
+    right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .timelineItem:nth-child(odd) .timelineContent li {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+
+  .timelineItem:nth-child(odd) .timelineContent li::before {
+    left: 0;
+    right: auto;
+  }
+}

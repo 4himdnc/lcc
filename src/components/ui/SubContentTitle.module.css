@@ -1,0 +1,12 @@
+.subContentTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-gary-900);
+  margin-bottom: 60px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.emphasis {
+  color: var(--color-primary);
+}

@@ -1,0 +1,266 @@
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 48px;
+  text-align: center;
+  position: relative;
+}
+
+.title span {
+  color: var(--color-primary);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.card {
+  background: var(--color-background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.sectionNumber {
+  font-size: 80px;
+  font-weight: 800;
+  color: rgba(231, 76, 60, 0.1);
+  position: absolute;
+  top: -32px;
+  left: -16px;
+  z-index: -1;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.sectionContent {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-light);
+  margin-bottom: 32px;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.serviceItem {
+  background: var(--color-background);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.serviceItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.serviceItem.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+.serviceItem.active::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary);
+  bottom: -10px;
+  transform: rotate(45deg);
+}
+
+.serviceTitle {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.doctorSection {
+  display: flex;
+  gap: 48px;
+  margin: 48px 0;
+}
+
+.doctorImage {
+  flex: 0 0 50%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.doctorImage img {
+  width: 100%;
+  display: block;
+}
+
+.doctorContent {
+  flex: 1;
+}
+
+.doctorTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.doctorText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+.programGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin: 48px 0;
+}
+
+.programGrid02 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 48px 0;
+}
+
+.programCard {
+  padding: 24px 24px 12px;
+  background: #fafafa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.programGrid02 .programCard {
+  background: var(--color-white);
+}
+
+.programCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.programImage {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  object-fit: cover;
+}
+
+.programGrid02 .programImage {
+  height: 270px;
+  display: block;
+}
+
+.programContent {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.programTitle {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.programText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .doctorSection {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .doctorImage {
+    flex: 0 0 100%;
+  }
+
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .programGrid02 {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .doctorTitle {
+    font-size: 20px;
+  }
+
+  .programGrid02 .programImage {
+    height: 180px;
+  }
+}

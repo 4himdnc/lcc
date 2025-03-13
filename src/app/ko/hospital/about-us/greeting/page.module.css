@@ -1,0 +1,183 @@
+.greetingPage {
+  width: 100%;
+}
+
+.introContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text);
+  word-break: keep-all;
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introImage {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* 인사말 섹션 스타일 */
+.greetingSection {
+  padding: 60px 20px;
+  background-color: var(--color-background);
+}
+
+.greetingWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-primary);
+  margin: 0 auto 0px;
+}
+
+/* 인사말 내용 스타일 */
+.greetingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.greetingContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text);
+  word-break: keep-all;
+}
+
+/* 강조 텍스트 스타일 */
+.emphasisText {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.directorSignature {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+.signatureText {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.directorTitle {
+  font-size: 16px;
+  color: var(--color-text-light);
+}
+
+.directorName {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-text);
+  font-family: "Nanum Myeongjo", serif;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+  .introContent {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .textContent {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .introContainer {
+    padding: 60px 20px;
+  }
+
+  .greetingSection {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .introImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .divider {
+    width: 50px;
+    height: 3px;
+    margin: 0 auto 30px;
+  }
+
+  .greetingContainer {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .paragraph {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .emphasisText {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .directorSignature {
+    padding-right: 10px;
+  }
+
+  .directorTitle {
+    font-size: 14px;
+  }
+
+  .directorName {
+    font-size: 18px;
+  }
+}

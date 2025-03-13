@@ -1,5 +1,5 @@
 import TertiaryMenu from "@/components/layout/TertiaryMenu";
-
+import styles from "./layout.module.css";
 export default function HospitalLayout({ children }: { children: React.ReactNode }) {
   const menuItems = [
     { id: "greeting", name: "인사말", path: "/ko/hospital/about-us/greeting" },
@@ -10,7 +10,7 @@ export default function HospitalLayout({ children }: { children: React.ReactNode
   return (
     <>
       <TertiaryMenu menuItems={menuItems} />
-      {children}
+      <div className={styles.container}>{children}</div>
     </>
   );
 }

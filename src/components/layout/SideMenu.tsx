@@ -27,9 +27,15 @@ const SideMenu = ({ isOpen, onClose }: SideMenuProps) => {
         name: "병원 소개",
         path: "/hospital",
         children: [
-          { name: "인사말", path: "/ko/hospital/about-us/greeting" },
-          { name: "소개", path: "/ko/hospital/about-us/introduce" },
-          { name: "연혁", path: "/ko/hospital/about-us/history" },
+          {
+            name: "사랑의병원",
+            path: "/hospital",
+            children: [
+              { name: "인사말", path: "/ko/hospital/about-us/greeting" },
+              { name: "소개", path: "/ko/hospital/about-us/introduce" },
+              { name: "연혁", path: "/ko/hospital/about-us/history" },
+            ],
+          },
           {
             name: "의료진 소개",
             path: "/hospital/doctors",
