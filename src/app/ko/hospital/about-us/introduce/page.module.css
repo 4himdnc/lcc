@@ -38,13 +38,19 @@
 }
 
 .cardContent {
-  padding: 24px;
+  padding: 24px 5px;
+}
+
+.cardContent h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: center;
 }
 
 .cardTitle {
   font-size: 17px;
   font-weight: 600;
-  margin-bottom: 8px;
   color: var(--color-text);
   text-align: center;
 }
