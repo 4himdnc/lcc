@@ -1,0 +1,132 @@
+.footer {
+  width: 100%;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 상단 메뉴 */
+.topMenu {
+  background-color: var(--color-gray-800);
+  padding: 12px 0;
+}
+
+.topMenu .container {
+  display: flex;
+  align-items: center;
+}
+
+.topMenuItem {
+  color: var(--color-gray-300);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.topMenuItem:hover {
+  color: var(--color-white);
+}
+
+.divider {
+  color: var(--color-gray-600);
+  margin: 0 10px;
+}
+
+/* 메인 푸터 */
+.mainFooter {
+  padding: 40px 0;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footerLogo {
+  margin-bottom: 20px;
+  flex: 0 0 200px;
+}
+
+.logo {
+  filter: brightness(0.9);
+}
+
+.footerInfo {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.hospitalName {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.address {
+  color: var(--color-gray-300);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.businessInfo {
+  color: var(--color-gray-300);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.clinicInfo {
+  margin-bottom: 20px;
+}
+
+.clinicTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contactInfo {
+  color: var(--color-gray-300);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.hours {
+  color: var(--color-gray-300);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.copyright {
+  color: var(--color-gray-400);
+  font-size: 13px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+  }
+
+  .footerLogo {
+    flex-basis: 100%;
+  }
+
+  .footerInfo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .divider {
+    opacity: 0;
+    display: block;
+    height: 3px;
+  }
+}

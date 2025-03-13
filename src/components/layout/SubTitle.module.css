@@ -1,11 +1,10 @@
 .pageContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 120px 20px 80px;
+  padding: 0px 20px 80px;
 }
 
 .pageHeader {
-  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -23,23 +22,12 @@
   margin: 0 auto;
 }
 
-.pageContent {
-  background-color: var(--color-background);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px var(--color-shadow);
-  padding: 40px;
-}
-
 @media (max-width: 768px) {
   .pageContainer {
-    padding: 100px 15px 60px;
+    padding: 0 15px 60px;
   }
 
   .pageTitle {
     font-size: 2rem;
-  }
-
-  .pageContent {
-    padding: 30px 20px;
   }
 }

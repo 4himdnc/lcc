@@ -1,12 +1,12 @@
-import PageTemplate from "@/components/common/PageTemplate";
+import SubTitle from "@/components/layout/SubTitle";
 
 export default function TelomerePage() {
   return (
-    <PageTemplate title="Telomere" subtitle="Telomere 페이지">
+    <SubTitle title="Telomere" subtitle="Telomere 페이지">
       <div>
         <h2>Telomere 페이지</h2>
         <p>준비 중입니다.</p>
       </div>
-    </PageTemplate>
+    </SubTitle>
   );
 }
