@@ -19,13 +19,11 @@ export default function FixedButton() {
       }
     };
 
-    // 페이지 로드와 라우트 변경 시 스와이퍼 초기화
     initSwiper();
     window.addEventListener("load", initSwiper);
 
-    // Next.js의 라우트 변경 이벤트 감지
     const handleRouteChange = () => {
-      setTimeout(initSwiper, 100); // 라우트 변경 후 약간의 지연을 두고 초기화
+      setTimeout(initSwiper, 100);
     };
 
     document.addEventListener("routeChangeComplete", handleRouteChange);
@@ -38,13 +36,13 @@ export default function FixedButton() {
 
   const handleScrollTop = () => {
     const isMainPage = window.location.pathname === "/";
-    if (isMainPage) {
-      // 스와이퍼가 존재하고 파괴되지 않았는지 확인
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMainPage && !isMobile) {
       const swiperElement = document.querySelector(".swiper") as SwiperElement;
       if (swiperElement?.swiper && !swiperElement.swiper.destroyed) {
         swiperElement.swiper.slideTo(0, 800);
       } else {
-        // 스와이퍼가 없거나 파괴된 경우 다시 초기화
         const initSwiper = () => {
           const newSwiperElement = document.querySelector(".swiper") as SwiperElement;
           if (newSwiperElement?.swiper) {

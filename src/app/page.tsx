@@ -70,6 +70,11 @@ export default function Home() {
               <div className={styles.content}>
                 <h2 className={styles.title}>{section.title}</h2>
                 <p className={styles.subtitle}>{section.subtitle}</p>
+                {section.link && (
+                  <Link href={section.link}>
+                    <button className={styles.button}>자세히 보기</button>
+                  </Link>
+                )}
               </div>
             </div>
           ))}

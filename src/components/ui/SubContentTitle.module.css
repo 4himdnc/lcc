@@ -10,3 +10,10 @@
 .emphasis {
   color: var(--color-primary);
 }
+
+@media (max-width: 768px) {
+  .subContentTitle {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}

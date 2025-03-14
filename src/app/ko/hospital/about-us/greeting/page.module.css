@@ -111,11 +111,6 @@
 
 /* 반응형 스타일 */
 @media (max-width: 1024px) {
-  .introContent {
-    flex-direction: column-reverse;
-    gap: 40px;
-  }
-
   .textContent {
     max-width: 100%;
     text-align: center;
@@ -127,12 +122,17 @@
 }
 
 @media (max-width: 768px) {
+  .introContent {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
   .introContainer {
-    padding: 60px 20px;
+    padding: 60px 20px 0px;
   }
 
   .greetingSection {
-    padding: 40px 20px;
+    padding: 0px;
   }
 
   .title {
@@ -155,7 +155,7 @@
   }
 
   .greetingContainer {
-    padding: 30px 20px;
+    padding: 30px 0px;
     gap: 30px;
   }
 
