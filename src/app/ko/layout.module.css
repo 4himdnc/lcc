@@ -4,3 +4,9 @@
   margin: 0 auto;
   padding: 200px 20px 80px;
 }
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 140px 20px 80px;
+  }
+}

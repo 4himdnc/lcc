@@ -20,7 +20,7 @@ const Header = () => {
 
         <div className={styles.centerSection}>
           <Link href="/">
-            <Image src="/images/logo.jpg" alt="병원 로고" width={80} height={54} priority />
+            <Image src="/images/logo.jpg" alt="병원 로고" width={80} height={54} priority className={styles.logo} />
           </Link>
         </div>
 

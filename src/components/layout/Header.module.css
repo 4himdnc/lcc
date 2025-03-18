@@ -69,6 +69,19 @@
 }
 
 @media (max-width: 768px) {
+  .logo {
+    width: 60px;
+    height: 43px;
+  }
+  .leftSection {
+    display: none;
+  }
+  .centerSection {
+    flex: 0;
+  }
+  .headerContent {
+    padding: 0.5rem 1rem;
+  }
   .headerLink {
     display: none;
   }
