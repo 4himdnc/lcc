@@ -4,7 +4,7 @@ import SubTitle from "@/components/layout/SubTitle";
 export default function HospitalLayout({ children }: { children: React.ReactNode }) {
   const secondaryMenuItems = [
     { id: "about-us", name: "병원소개", path: "/ko/hospital/about-us/greeting" },
-    { id: "doctors", name: "의료진소개", path: "/ko/hospital/doctors/chief" },
+    { id: "doctors", name: "의료진소개", path: "/ko/hospital/doctors/director" },
     { id: "treatments", name: "진료안내", path: "/ko/hospital/treatments" },
     { id: "facilities", name: "시설안내", path: "/ko/hospital/facilities" },
     { id: "location", name: "찾아오시는길", path: "/ko/hospital/location" },

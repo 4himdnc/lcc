@@ -1,0 +1,136 @@
+.doctorsSection {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+.doctorContainer {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-gray-200);
+  padding-bottom: 60px;
+}
+
+.doctorContainer:last-child {
+  border-bottom: none;
+}
+
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.imageWrapper img {
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.doctorHeader {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 20px;
+}
+
+.doctorName {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.doctorTitle {
+  font-size: 20px;
+  color: var(--color-gray-700);
+  font-weight: 500;
+  text-align: center;
+}
+
+.sectionContainer {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sectionTitle::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 24px;
+  background-color: var(--color-primary);
+  margin-right: 12px;
+  border-radius: 3px;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+}
+
+.bullet {
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.itemContent {
+  color: var(--color-gray-800);
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .doctorsSection {
+    gap: 60px;
+  }
+
+  .doctorContainer {
+    padding-bottom: 40px;
+  }
+
+  .doctorName {
+    font-size: 24px;
+  }
+
+  .doctorTitle {
+    font-size: 17px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .itemContent {
+    font-size: 16px;
+  }
+
+  .sectionContainer {
+    margin-bottom: 0px;
+  }
+}

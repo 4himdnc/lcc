@@ -1,0 +1,354 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background: var(--color-background);
+}
+
+.title {
+  font-size: 36px;
+  color: var(--color-gray-900);
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+.section {
+  margin-bottom: 80px;
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  color: var(--color-gray-900);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.sectionTitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 28px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.timeTable {
+  background: var(--color-background-light);
+  padding: 30px;
+  border-radius: 12px;
+  margin: 20px 0 40px;
+  border: 1px solid var(--color-gray-100);
+  transition: all 0.3s ease;
+}
+
+.timeTable:hover {
+  border: 1px solid var(--color-primary);
+  transform: translateY(-5px);
+}
+
+.timeRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--color-gray-800);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeRow::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.timeLabel {
+  min-width: 120px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.contactInfo {
+  margin-top: 30px;
+}
+
+.contactCard {
+  background: var(--color-background-light);
+  padding: 30px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-gray-100);
+}
+
+.contactCard:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 5px 15px rgba(206, 23, 31, 0.1);
+}
+
+.contactCard h4 {
+  color: var(--color-gray-700);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.phoneNumber {
+  font-size: 28px;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin: 10px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phoneNumber::before {
+  content: "📞";
+  font-size: 24px;
+}
+
+.extensionList {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.extensionList li {
+  margin-bottom: 12px;
+  color: var(--color-gray-700);
+  padding-left: 25px;
+  position: relative;
+}
+
+.extensionList li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+.reservationSteps {
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.additionalClass {
+  margin-top: 0;
+  counter-reset: step 3;
+  grid-template-columns: 1fr;
+  margin-top: 40px;
+}
+
+.step {
+  position: relative;
+  padding: 30px;
+  background: var(--color-background-light);
+  border-radius: 12px;
+  counter-increment: step;
+  border: 1px solid var(--color-gray-100);
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+}
+
+.step h3 {
+  font-size: 22px;
+  color: var(--color-gray-900);
+  margin-bottom: 20px;
+  padding-left: 45px;
+  position: relative;
+}
+
+.step h3::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.step p {
+  color: var(--color-gray-700);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.step ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.step ul li {
+  color: var(--color-gray-700);
+  line-height: 1.6;
+  margin-bottom: 6px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.step ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.step strong {
+  color: var(--color-gray-900);
+  font-weight: 600;
+}
+
+.notice {
+  background: var(--color-background-light);
+  border-left: 4px solid var(--color-primary);
+  padding: 0px 0 0 10px;
+  margin-top: 10px;
+  color: var(--color-gray-800);
+  border-radius: 0 12px 12px 0;
+  position: relative;
+}
+
+.onlineSteps {
+  margin: 15px 0;
+  position: relative;
+}
+
+.onlineStep {
+  text-align: center;
+  flex: 1;
+  position: relative;
+  padding: 5px;
+}
+
+.onlineStep:last-child::after {
+  display: none;
+}
+
+.mapSection {
+  margin-top: 40px;
+  position: relative;
+  background: var(--color-background-light);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mapLink {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.mapLink:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.step .strong {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 15px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .section {
+    padding: 25px;
+    margin-bottom: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .timeTable {
+    padding: 20px;
+  }
+
+  .timeRow {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .timeLabel {
+    margin-bottom: 8px;
+  }
+
+  .step {
+    padding: 20px;
+  }
+
+  .step h3 {
+    font-size: 20px;
+  }
+
+  .onlineSteps {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mapImage {
+    content: url("/mobile-map.jpg"); /* 모바일용 지도 이미지 */
+  }
+}
+
+@media (min-width: 769px) {
+  .mapImage {
+    content: url("/desktop-map.jpg"); /* 데스크톱용 지도 이미지 */
+  }
+}
